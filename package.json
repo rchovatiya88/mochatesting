@@ -4,7 +4,8 @@
   "description": "learn mocha testing",
   "main": "utils.js",
   "scripts": {
-    "test": "mocha **/*.test.js"
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,14 @@
   },
   "homepage": "https://github.com/rchovatiya88/mochatesting#readme",
   "dependencies": {
+    "expect": "^1.20.2",
     "mocha": "^3.0.0",
     "nodemon": "^1.14.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

@@ -18,4 +18,20 @@ Write a Test Case.
 			});
 
 
+Use Assertion library Expect to throw errors automaticatlly without writing it manually like we before. 
 
+it('should square the number', () => {
+  var res = utils.square(10);
+
+  expect(res).toBe(100).toBeA('number');
+  // if (res !== 100) {
+  //   throw new Error(`Expected 100, but got ${res}.`)
+  // }
+
+When you have async Function, you need to pass in a done arguement. 
+	it('should aysnyc test', (done) => {
+	async.asyncAdd(4 ,3, (sum) => {
+			expect(sum).toBe(7).toBeA('number')
+		done();
+		});
+	});
