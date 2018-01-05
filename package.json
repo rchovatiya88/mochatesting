@@ -1,0 +1,22 @@
+{
+  "name": "mochatesting",
+  "version": "1.0.0",
+  "description": "learn mocha testing",
+  "main": "utils.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rchovatiya88/mochatesting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rchovatiya88/mochatesting/issues"
+  },
+  "homepage": "https://github.com/rchovatiya88/mochatesting#readme",
+  "dependencies": {
+    "mocha": "^3.0.0"
+  }
+}

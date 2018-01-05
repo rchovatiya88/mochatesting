@@ -8,10 +8,12 @@ it('should add two numbers', () => {
   }
 });
 
-it('should square a number', () => {
-  var res = utils.square(3);
+it('should square the number', () => {
+  var res = utils.square(10);
 
-  if (res !== 9) {
-    throw new Error(`Expected 9, but got ${res}.`);
+  if (res !== 100) {
+    throw new Error(`Expected 100, but got ${res}.`)
   }
 });
+
+
