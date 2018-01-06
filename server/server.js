@@ -12,6 +12,20 @@ app.get('/', (req, res) =>{ // req = http request , res = response
     }); 
 });
 
+app.get('/users',(req, res) => {
+    res.send([{
+        name: 'Mike',
+        age: 27
+    }, {
+        name: 'Ronak',
+        age: 29
+    }, {
+        name: 'Cannon',
+        age: 28
+    }
+    ])
+    
+})
 app.listen(3000); // listen on port 3000
 
 // export the app so 'supertest' can use the app response and requests
