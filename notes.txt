@@ -35,3 +35,45 @@ When you have async Function, you need to pass in a done arguement.
 		done();
 		});
 	});
+
+Use Supertest to test Express!!
+
+
+API TEST EXAMPLE
+
+From Server.js
+=============================
+// Calling Express Server
+const express = require('express');
+
+// setting the variable app to express
+var app = express();
+
+// app is routes to the home page http request 
+app.get('/', (req, res) =>{ // req = http request , res = response 
+    res.send('Hello World!'); // response send String 'Hello World'
+});
+
+app.listen(3000); // listen on port 3000
+
+// export the app so 'supertest' can use the app response and requests
+module.exports.app = app; 
+=================================
+
+From Server.test.js
+
+// Use supertest library to help you test API Json Response
+const request = require('supertest'); 
+
+// Get the variable app from server.js 
+var app = require('./server').app;
+
+// Write the Mocha test 
+it('should return hello world response', (done) => {
+    request(app) // make a request to the app 
+        .get('/')
+        .expect('Hello World!') // expect the same string Hello World.
+        .end(done);
+})
+
+=================================

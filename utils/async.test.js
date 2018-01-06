@@ -9,8 +9,8 @@ it('should aysnyc test', (done) => {
 });
 
 it('should aysnyc square', (done) => {
-    async.asyncSquare(10, (sum) => {
-         expect(sum).toBe(100).toBeA('number')
+    async.asyncSquare(10, (res) => {
+         expect(res).toBe(100).toBeA('number')
      done();
      });
  });
